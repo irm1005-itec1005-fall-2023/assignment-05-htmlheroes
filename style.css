@@ -1,55 +1,324 @@
-/*
-  CSS File
-*/
-
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-peppermint);
-  --body-background-colour: var(--colour-cello);
+*{
+  font-family: 'Press Start 2P', monospace; 
 }
 
-/*
-  PAGE / BODY
-*/
+/*html {
+  background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 255, 47) 60%, rgb(0, 0, 0) 95%);
+  background-size: cover;
+}*/
+
+/* .wrapper{
+} */
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(./images/etc/arcageBGwow.png);
+  background-size: cover;
 }
 
-main {
-  min-height: 100vh;
-
+.controllers{
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
+}.controllers img{
+  height: auto;
+  max-width: 50px;
+  margin-bottom: 1rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}.controllers img:hover{
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  color: rgb(157, 0, 255);
+  padding: 0rem;
+  box-shadow: -8px 8px  rgb(55, 0, 255, 0.3);
+  align-items: center;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  border: 1px solid rgb(38, 0, 255);
+  margin: 4rem;
+}
+/* .container:hover{
+  /* transform: matrix3d(10, 0, 0, 0, 0, 1, 0, 0, 0, 10, 10, 0, 0, 0, 0, 1);
+  transition-duration: 5s; 
+  transform:translate(0px, -1000px);
+  transition: 30s;  funniest shit i ever did see 
+}   */
+.container p{
+  font-size: 0.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+.header {
+  font-size: 0.8rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgb(0, 0, 0);
+  color: rgb(55, 0, 255);
+  padding: 1rem;
   align-items: center;
 }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgba(0, 255, 89, 0);
+  color: rgb(0, 255, 128);
+  align-items: center;
+}
+.nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(0, 255, 128);
+  box-shadow: -3px 3px  rgb(0, 255, 128, 0.5);
+  padding: 0.5rem;
+} .nav a:hover{
+  background-color: rgb(14, 157, 85);
+} .nav a:active{
+  background-color: rgb(0, 255, 195);
+  cursor:progress;
+}
 
-/*
-  Screen reader text utility class
-*/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
+.games{
+  margin: 1rem 5rem 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  background-color: rgb(0, 0, 0);
+  box-shadow: -8px 8px  rgb(55, 0, 255, 0.3);
+  border: 1px solid rgb(38, 0, 255);
+}
+.games1 {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: auto;
+}
+.games2 {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: auto;
+}
+.game1{
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(0, 225, 255);
+  height: 100%;
+  width: 100%;
+  max-width: 50%;
+}.game1 img{
+  height: 30%;
+  width: 30%;
+  align-self: center;
+  object-fit: cover;
+  cursor: pointer;
+}.game1 img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}.game1 img:active{
+  transform: scale(1.5);
+  transition: 0.5s;
+  cursor: progress;
+}
+
+
+.game2{
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 0, 221);
+  height: 100%;
+  width: 100%;
+  max-width: 50%;
+}.game2 img{
+  height: 30%;
+  width: 30%;
+  align-self: center;
+  object-fit: cover;
+  cursor: pointer;
+}.game2 img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}.game2 img:active{
+  transform: scale(1.5);
+  transition: 0.5s;
+  cursor: progress;
+}
+
+.game3{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 0, 0);
+  height: 100%;
+  width: 100%;
+  max-width: 50%;
+}.game3 img{
+  height: 30%;
+  width: 30%;
+  align-self: center;
+  object-fit: cover;
+  cursor: pointer;
+}.game3 img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}.game3 img:active{
+  transform: scale(1.5);
+  transition: 0.5s;
+  cursor: progress;
+}
+
+.game4{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 208, 0);
+  height: 100%;
+  width: 100%;
+  max-width: 50%;
+}.game4 img{
+  height: 30%;
+  width: 30%;
+  align-self: center;
+  object-fit: cover;
+  cursor:not-allowed;
+}.game4 img:hover{
+  filter: grayscale(100%);
+  transform: scale(0.9);
+  transition: 0.5s;
+}.game4 img:active{
+  filter:invert(100%);
+  transform: scale(0.7);
+  transition: 0.5s;
+}
+
+/* .popupTot{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+.popupHeader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 128);
+  font-size: 0.7rem;
+  padding: 1rem;
+  box-shadow: -8px 8px  rgb(55, 0, 255, 0.3);
+  border: 1px solid rgb(38, 0, 255);
+  margin: 0rem 1rem 0rem 1rem;
+}
+.popupForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  padding: 1rem;
+  border: 1px solid rgb(0, 255, 55);
+  font-size: 1rem;
+  box-shadow: -5px 5px rgb(0, 255, 55, 0.5);
+  margin: 1rem 1rem 1rem;
+  color:rgb(0, 13, 255);
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+} .submit {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(255, 0, 251);
+  box-shadow: -3px 3px  rgba(255, 0, 251, 0.5);
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+} .submit:hover{
+  background-color: rgb(187, 0, 184);
+} .submit:active{
+  background-color: rgb(143, 0, 140);
+  cursor:progress;
+}
+.input-box, textarea{
+  background: cyan;
+  max-width: 220px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.abTot{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  padding: 1rem;
+  border: 1px solid rgb(255, 0, 238);
+  font-size: 0.8rem;
+  box-shadow: -5px 5px rgb(255, 0, 238, 0.5);
+  margin: 0rem;
+  color:rgb(255, 0, 238);
+  overflow: hidden;
+  min-width: 350px;
+  min-height: 265px;
+  max-width: auto;
+  max-height: auto;
+} .abTot p{
+  margin-bottom: 1rem;
+}
+.blocks{
+  display: flex;
+  flex-direction: row;
+}
+.blocks img{
+  height: 80%;
+  width: 30%;
+}.blocks img:hover{
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 128);
+  font-size: 0.5rem;
+  padding: 1rem;
+  box-shadow: -8px 8px  rgb(55, 0, 255, 0.3);
+  border: 1px solid rgb(38, 0, 255);
+  margin: 1rem 4rem 1rem 4rem;
+}	
+
+button{
+  background-color: rgba(38, 140, 140, 0);
+  border: none;
 }
